@@ -1,8 +1,8 @@
 <label for="">Server Name</label>
 <br>
-<!-- (input)="onUpdateServerName($event)" - One-Way-Databinding  -->
+<!-- (input)="onUpdateServerName($event)" - INFO: One-Way-Databinding  -->
 <!-- <input type="text" placeholder="Enter server name" class="form-control" (input)="onUpdateServerName($event)"> -->
-<!-- [(ngModel)]="serverName" - Two-Way-Databinding  -->
+<!-- INFO: [(ngModel)]="serverName" - Two-Way-Databinding  -->
 <input type="text" placeholder="Enter server name" class="form-control" [(ngModel)]="serverName">
 <br>
 <button class="btn btn-primary" [disabled]="!allowNewSerwer" (click)="onCreateServer()">
@@ -10,8 +10,12 @@
 </button>
 <br>
 <br>
-<!-- <p>{{ serverName }}</p> -->
+<!-- INFO: The ngIf directive allows you to remove or, conversely, display an element under a certain condition. -->
+<p *ngIf="serverCreated; else noServer">Server was created! Server name is {{ serverName }}</p>
+<ng-template #noServer>
+  <p *ngIf="!serverCreated">No server was created!</p>
+</ng-template>
 <!-- <p [innerText]="allowNewSerwer">{{ allowNewSerwer }}</p> -->
-<p>{{ serwerCreationStatus }}</p>
+<!-- <p>{{ serwerCreationStatus }}</p> -->
 <br>
 <app-server></app-server>
