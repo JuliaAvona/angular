@@ -18,4 +18,5 @@
 <!-- <p [innerText]="allowNewSerwer">{{ allowNewSerwer }}</p> -->
 <!-- <p>{{ serwerCreationStatus }}</p> -->
 <br>
-<app-server></app-server>
+<!--  INFO: Outputting Lists with ngFor -->
+<app-server *ngFor="let server of servers"></app-server>
