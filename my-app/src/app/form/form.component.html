@@ -1,0 +1,6 @@
+<label for="username">Form Name</label>
+<input type="text" id="username" name="username" [(ngModel)]="username" placeholder="Enter username"
+  (input)="updateButtonStatus()">
+<!-- <button class="form-control" (click)="onUpdateUsername()">Submit</button> -->
+<button disabled class="form-control" [disabled]="isDisabled" (click)="clearUsername()">Submit</button>
+<h2>{{username}}</h2>
