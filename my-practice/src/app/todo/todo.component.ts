@@ -15,6 +15,8 @@ export class TodoComponent {
   ];
 
   newTaskTitle: string = '';
+  editingTaskIndex: number | null = null;
+  editTaskTitle: string = '';
 
   constructor() {
   }
@@ -28,5 +30,20 @@ export class TodoComponent {
   deleteTask(i: number): void {
     this.tasks.splice(i, 1);
     console.log(i);
+  }
+
+  toggleEditing(index: number) {
+    if (this.editingTaskIndex === index) {
+      this.editingTaskIndex = null;
+    } else {
+      this.editingTaskIndex = index;
+    }
+  }
+
+  saveTask(index: number, newTitle: string) {
+    if (newTitle.trim()) {
+      this.tasks[index].title = newTitle.trim();
+    }
+    this.editingTaskIndex = null;
   }
 }

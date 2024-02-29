@@ -1,0 +1,14 @@
+div {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+app-header,
+app-footer {
+  flex-shrink: 0;
+}
+
+app-todo {
+  flex-grow: 1;
+}
