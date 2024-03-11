@@ -9,6 +9,8 @@ import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { TodoComponent } from './todo/todo.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { ShopComponent } from './shop/shop.component';
+import { ProductComponent } from './shop/product/product.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { CalculatorComponent } from './calculator/calculator.component';
     MainComponent,
     FooterComponent,
     TodoComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    ShopComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ div {
   padding: 20px;
   margin: auto;
   background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+  align-items: center;
 }
 
 h1 {
@@ -40,6 +41,7 @@ button:hover {
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
+  height: 80vh;
 }
 
 .task {
