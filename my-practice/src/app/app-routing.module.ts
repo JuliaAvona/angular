@@ -5,17 +5,21 @@ import { TodoComponent } from './todo/todo.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { ShopComponent } from './shop/shop.component';
 import { ProductComponent } from './shop/product/product.component';
+import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 
 const routes: Routes = [
   { path: 'home', component: MainComponent },
   { path: 'todo', component: TodoComponent },
   { path: 'calculator', component: CalculatorComponent },
-  { path: 'shop',
+  {
+    path: 'shop',
     component: ShopComponent,
     children: [
       { path: '', component: ShopComponent },
       { path: 'products/:id', component: ProductComponent }
-    ] },
+    ]
+  },
+  { path: 'life-cicle', component: LifeCycleComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 

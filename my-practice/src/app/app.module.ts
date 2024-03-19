@@ -11,6 +11,9 @@ import { TodoComponent } from './todo/todo.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { ShopComponent } from './shop/shop.component';
 import { ProductComponent } from './shop/product/product.component';
+import { LifeCycleComponent } from './life-cycle/life-cycle.component';
+import { ChildComponent } from './life-cycle/child/child.component';
+import { ParentComponent } from './life-cycle/parent/parent.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { ProductComponent } from './shop/product/product.component';
     TodoComponent,
     CalculatorComponent,
     ShopComponent,
-    ProductComponent
+    ProductComponent,
+    LifeCycleComponent,
+    ChildComponent,
+    ParentComponent
   ],
   imports: [
     BrowserModule,
